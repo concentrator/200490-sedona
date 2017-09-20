@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Dmitry Iovlev](https://up.htmlacademy.ru/adaptive/12/user/200490).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Баженов](https://htmlacademy.ru/profile/id87047).
 
 ---
 
