@@ -1,0 +1,21 @@
+.radio {
+  margin-bottom: 13px;
+}
+
+.radio::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border: 17px solid #f2f2f2;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+}
+
+.radio-group__input:checked + .radio::before,
+.radio--checked::before {
+  background-color: #333333;
+}
