@@ -1,4 +1,16 @@
 .feature {
   text-align: left;
-  padding: 10px 20px 10px 50px;
+  box-sizing: border-box;
+  padding: 0 20px 0 50px;
+}
+
+@media (min-width: 768px) {
+  .feature {
+    width: 33.3%;
+    height: 330px;
+    padding: 70px;
+    padding-top: 132px;
+    flex-grow: 1;
+    .center();
+  }
 }

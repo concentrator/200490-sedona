@@ -1,21 +1,18 @@
 html {
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  min-width: 320px;
-  max-width: 1200px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: @font-base;
   line-height: @line-height-base;
   text-transform: uppercase;
   color: @font-base-color;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
 }
 
 a {
@@ -58,4 +55,12 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
 }

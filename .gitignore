@@ -3,6 +3,7 @@
 *.ai
 *.log
 *.pdf
+*.jpg
 *.psd
 *.sublime*
 css/*.css

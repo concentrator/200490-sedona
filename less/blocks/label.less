@@ -4,10 +4,10 @@
 }
 
 .label--icon {
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
+  display: block;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  margin-left: 22px;
 }
 
 .label--icon::after {
@@ -30,9 +30,19 @@
 }
 
 .label--custom {
-  position: relative;
-  padding: 15px 0;
-  padding-left: 78px;
+  margin: 0;
   text-transform: none;
   .heading();
+}
+
+
+@media (min-width: 1200px) {
+  .label--icon {
+    margin: 0;
+    margin-right: 16px;
+  }
+
+  .label--tel span {
+    display: none;
+  }
 }
