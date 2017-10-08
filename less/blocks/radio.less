@@ -1,8 +1,11 @@
 .radio {
-  margin-bottom: 13px;
+  position: relative;
+  height: 56px;
+  line-height: 56px;
+  padding-left: 78px;
 }
 
-.radio::before {
+.radio__label::before {
   content: "";
   position: absolute;
   display: block;
@@ -15,7 +18,13 @@
   background-color: #f2f2f2;
 }
 
-.radio-group__input:checked + .radio::before,
-.radio--checked::before {
+.radio input:checked + .radio__label::before,
+.radio--checked .radio__label::before {
   background-color: #333333;
+}
+
+@media (min-width: 768px) {
+  .radio {
+    padding-left: 76px;
+  }
 }

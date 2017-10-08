@@ -1,8 +1,22 @@
 .video__promo {
   margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 182px;
 }
 
 .video__player {
-  width: 320px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .video__promo {
+    min-height: 234px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .video__promo {
+    margin-bottom: 12px;
+  }
 }

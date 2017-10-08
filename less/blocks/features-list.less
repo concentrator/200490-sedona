@@ -1,4 +1,14 @@
 .features-list {
+  min-height: 416px;
   .list-reset();
-  padding: 0 20px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .features-list {
+    min-height: auto;
+    display: flex;
+    padding: 0;
+  }
 }
