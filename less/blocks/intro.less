@@ -1,5 +1,5 @@
 .intro {
-  max-width: 560px;
+  max-width: 520px;
   padding: 10px 20px;
   padding-bottom: 2px;
   box-sizing: border-box;
@@ -58,13 +58,14 @@
   }
 
   .intro__title {
-    margin: 28px 0;
+    margin: 30px 0;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .intro--inner {
-    min-height: 222px;
+    padding: 20px 40px;
+
   }
 
   .intro__title--index {
@@ -78,6 +79,6 @@
 
 @media (min-width: 1200px) {
   .intro--inner {
-    min-height: 261px;
+
   }
 }

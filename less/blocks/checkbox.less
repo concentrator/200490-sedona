@@ -13,6 +13,7 @@
   height: 56px;
   border-radius: 4px;
   background-color: #f2f2f2;
+  cursor: pointer;
 }
 
 .checkbox__label::after {
@@ -33,6 +34,23 @@
 .checkbox--checked .checkbox__label::after {
   display: block;
 }
+
+.checkbox__label:hover::before {
+  background-color: #e5e5e5;
+}
+
+.checkbox input:focus + .checkbox__label::before {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.checkbox__label:active::before {
+  background-color: #d5d5d5;
+}
+
+.checkbox input:checked + .checkbox__label:active::after {
+  border-color: #a4a4a4;
+}
+
 
 @media (min-width: 1200px) {
   .checkbox {

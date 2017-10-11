@@ -6,7 +6,6 @@
 .social__item {
   display: inline-block;
   margin-right: 6px;
-  background-color: @sedona-color;
 }
 
 .social__item:last-child {
@@ -14,7 +13,41 @@
 }
 
 .social__link {
+  position: relative;
   display: block;
   width: 46px;
   height: 48px;
+  background-color: @sedona-color;
+
+  &::after {
+    .pseudo();
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &--twitter::after {
+    background: url("../img/icon-twitter.svg") no-repeat center;
+  }
+
+  &--facebook::after {
+    background: url("../img/icon-facebook.svg") no-repeat center;
+  }
+
+  &--youtube::after {
+    background: url("../img/icon-youtube.svg") no-repeat center;
+  }
+
+  &:hover {
+    background-color: @sedona-color-mid;
+  }
+
+  &:active {
+    background-color: @sedona-color-dark;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 }

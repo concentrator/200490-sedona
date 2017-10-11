@@ -4,17 +4,18 @@
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .gallery {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 768px;
     padding: 0 60px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: @desktop-width) {
   .gallery {
+    width: 100%;
     padding: 0;
   }
 }

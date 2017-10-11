@@ -20,7 +20,7 @@
   margin-top: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .page-footer {
     flex-direction: row;
     min-height: 80px;
@@ -35,13 +35,17 @@
   }
 
   .page-footer__copyright {
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: calc(~"100px - 5%");
+    margin: auto 60px auto auto;
   }
 
   .page-footer__hashtag {
     margin-top: auto;
     margin-bottom: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__copyright {
+    margin-right: 44px;
   }
 }
