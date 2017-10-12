@@ -1,16 +1,73 @@
 .feature {
   text-align: left;
   box-sizing: border-box;
-  padding: 0 20px 0 50px;
+  padding: 6px 20px 6px 50px;
 }
 
-@media (min-width: 768px) {
+.feature__title {
+  margin-top: 9px;
+  margin-bottom: 14px;
+  .heading();
+}
+
+.feature__text {
+  margin: 8px 0;
+
+  & br {
+    display: none;
+  }
+}
+
+.feature--house {
+  background: url("../img/icon-house.svg") no-repeat 1px 6px;
+  background-size: 39px 37px;
+}
+
+.feature--gift {
+  background: url("../img/icon-gift.svg") no-repeat 5px 3px;
+  background-size: 32px 38px;
+}
+
+.feature--food {
+  background: url("../img/icon-burger.svg") no-repeat -2px 9px;
+  background-size: 40px 35px;
+}
+
+@media (min-width: @tablet-width) {
   .feature {
     width: 33.3%;
     height: 330px;
-    padding: 70px;
+    padding: 45px;
     padding-top: 132px;
     flex-grow: 1;
     .center();
+  }
+
+  .feature__title {
+    margin-top: 26px;
+    font-size: 21px;
+  }
+
+  .feature__text {
+    margin: 20px 0;
+
+    & br {
+      display: inline;
+    }
+  }
+
+  .feature--house {
+    background-position: center 60px;
+    background-size: 75px 72px;
+  }
+
+  .feature--gift {
+    background-position: center 57px;
+    background-size: 64px 75px;
+  }
+
+  .feature--food {
+    background-position: center 63px;
+    background-size: 77px 68px;
   }
 }

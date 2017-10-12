@@ -12,7 +12,7 @@
 
 .page-main__booking {
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 42px;
 }
 
 .page-main__gallery {
@@ -26,11 +26,15 @@
 }
 
 .page-main__video {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
+  .page-main__banner {
+    margin-bottom: 24px;
+  }
+
   .page-main__banner--index {
     margin-bottom: 11px;
   }
@@ -39,26 +43,58 @@
     margin-bottom: 26px;
   }
 
-  .page-main__gallery {
-    margin-top: 0;
+  .page-main__intro--inner {
+    margin-bottom: 35px;
   }
 
+  .page-main__booking {
+    margin-top: 20px;
+    margin-bottom: 53px;
+  }
+
+  .page-main__gallery {
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+
+  .page-main__video {
+    margin-bottom: 40px;
+  }
+
+
   .page-main__review {
-    margin-bottom: 60px;
+    margin-bottom: 62px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: @desktop-width) {
+  .page-main__banner {
+    margin-bottom: 61px;
+  }
+
+  .page-main__banner--index {
+    margin-bottom: 11px;
+  }
+
   .page-main__intro {
     margin-bottom: 8px;
+  }
+
+  .page-main__intro--inner {
+    margin-bottom: 20px;
   }
 
   .page-main__advantages {
     margin-top: 18px;
   }
 
+  .page-main__booking {
+    margin-bottom: 60px;
+  }
+
   .page-main__gallery {
-    margin-top: 18px;
+    margin-top: 17px;
+    margin-bottom: 32px;
   }
 
   .page-main__video {

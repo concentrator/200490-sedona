@@ -73,22 +73,47 @@
   background-size: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .banner {
     height: 290px;
+    background: url("../img/bg-back-desktop@1x.jpg") no-repeat 50% 100%;
   }
 
   .banner--index {
     height: 518px;
   }
+
+  .banner__text {
+    top: 95px;
+    width: 458px;
+    height: 78px;
+  }
+
+  .banner__text--index {
+    top: 77px;
+    width: 460px;
+    height: 350px;
+  }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: @desktop-width) {
   .banner {
     height: 301px;
   }
 
   .banner--index {
     height: 518px;
+  }
+
+  .banner__text {
+    top: 102px;
+    width: 461px;
+    height: 79px;
+  }
+
+  .banner__text--index {
+    top: 77px;
+    width: 460px;
+    height: 350px;
   }
 }

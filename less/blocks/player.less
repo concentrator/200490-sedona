@@ -4,29 +4,85 @@
 }
 
 .player__screen {
-  position: relative;
   width: 320px;
   height: 201px;
 }
 
 .player__controls {
+  display: flex;
+  flex-wrap: wrap;
   width: 280px;
   height: 111px;
   margin: 0 auto;
   margin-top: -45px;
+  background-color: #f2f2f2;
 }
 
 .player__scroll {
   position: relative;
+  width: 100%;
   height: 45px;
-  background-color: #000000;
-  opacity: 0.6;
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
+.player__bar {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  width: 235px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.player__bar-slider {
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: 36px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.player__replay,
+.player__subtitles,
+.player__fullscreen {
+  position: relative;
+  display: block;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.player__replay {
+  width: 16px;
+  height: 20px;
+  background: url("../img/icon-video-replay.svg") no-repeat center;
+  margin-left: 25px;
+}
+
+.player__subtitles {
+  width: 32px;
+  height: 20px;
+  background: url("../img/icon-video-subtitles.svg") no-repeat center;
+  margin-left: auto;
+  margin-right: 31px;
+}
+
+.player__fullscreen {
+  width: 20px;
+  height: 20px;
+  background: url("../img/icon-video-fullscreen.svg") no-repeat center;
+  margin-right: 23px;
+}
+
+
 .player__nav {
   height: 66px;
-  background-color: #f2f2f2;
 }
 
 @media (min-width: 768px) {
@@ -34,10 +90,70 @@
     width: 648px;
     height: 500px;
   }
+
+  .player__screen {
+    width: 100%;
+    height: 100%;
+  }
+
+  .player__preview {
+    width: 100%;
+    height: 100%;
+  }
+
+  .player__controls {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 92px;
+    margin-top: -93px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid #666666;
+  }
+
+  .player__scroll {
+    order: 2;
+    width: 389px;
+    margin: auto 42px;
+    background: none;
+  }
+
+  .player__bar {
+    width: 100%;
+    left: 0;
+  }
+
+  .player__bar-slider {
+    left: 113px;
+  }
+
+  .player__replay {
+    order: 1;
+    margin-left: 35px;
+  }
+
+  .player__subtitles {
+    order: 3;
+    margin-left: 0;
+  }
+
+  .player__fullscreen {
+    order: 4;
+    margin-right: 41px;
+  }
 }
 
 @media (min-width: 1200px) {
   .video__player {
     width: 800px;
+  }
+
+  .player__controls {
+    height: 93px;
+    border-bottom: none;
+  }
+
+  .player__scroll {
+    width: 540px;
   }
 }

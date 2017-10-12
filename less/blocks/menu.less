@@ -1,11 +1,28 @@
 .menu {
-  min-height: 223px;
+  position: relative;
   .list-reset();
-  background-color: @sedona-color;
+
+  &::after {
+    .pseudo();
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    opacity: 0.2;
+  }
 }
 
 .menu__item {
   .center();
+
+  &:first-child .menu__link {
+    border-top: 1px solid transparent;
+  }
+
+  &:last-child .menu__link {
+    border-bottom: none;
+  }
 }
 
 .menu__link {
@@ -14,20 +31,40 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 40px;
+  padding: 7px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+  background-color: @sedona-color;
 }
 
+@media (max-width: @mobile-width-only) {
+  .menu__link[href] {
+    &:hover {
+      background-color: @sedona-color-mid;
+    }
 
-@media (min-width: 768px) {
+    &:active {
+      background-color: @sedona-color-dark;
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
   .menu {
     display: flex;
     flex-wrap: wrap;
-    min-height: 56px;
     background-color: #ffffff;
+
+    &::after {
+      display: none;
+    }
   }
 
   .menu__item {
     display: flex;
     width: 20%;
+    min-height: 56px;
     justify-content: center;
     align-items: center;
 
@@ -38,9 +75,34 @@
 
   .menu__link {
     display: block;
+    padding: 0;
+    margin-top: -3px;
     color: #000000;
     font-size: 14px;
     font-weight: 700;
     line-height: 26px;
+    background-color: #ffffff;
+    border: none;
+  }
+
+  .menu__link[href] {
+    &:hover {
+      color: @sedona-color;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+  .menu__link--active[href] {
+    color: rgba(118, 99, 87, 1);
+
+    &:hover {
+      color: rgba(96, 78, 67, 1);
+    }
+
+    &:active {
+      color: rgba(118, 99, 87, 0.3);
+    }
   }
 }

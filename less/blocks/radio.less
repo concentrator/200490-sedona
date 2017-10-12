@@ -16,11 +16,32 @@
   border: 17px solid #f2f2f2;
   border-radius: 50%;
   background-color: #f2f2f2;
+  cursor: pointer;
 }
 
 .radio input:checked + .radio__label::before,
 .radio--checked .radio__label::before {
   background-color: #333333;
+}
+
+.radio__label:hover::before {
+  border-color: #e5e5e5;
+  background-color: #e5e5e5;
+}
+
+.radio input:focus + .radio__label::before {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.radio__label:active::before {
+  border-color: #d5d5d5;
+  background-color: #d5d5d5;
+}
+
+.radio input:checked + .radio__label:active::before,
+.radio--checked .radio__label:active::before {
+  border-color: #d5d5d5;
+  background-color: #a4a4a4;
 }
 
 @media (min-width: 768px) {

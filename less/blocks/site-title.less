@@ -1,10 +1,17 @@
 .site-title {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 26px;
-  color: #000000;
+  .heading();
+}
+
+.site-title--big {
+  font-size: 21px;
 }
 
 .site-title--white {
   color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .site-title--big {
+    font-size: 30px;
+  }
 }

@@ -1,26 +1,49 @@
 .booking {
-  padding: 10px 20px;
-  min-height: 267px;
+  max-width: 460px;
+  padding: 6px 20px;
   .center();
 }
 
+.booking__title {
+  margin: 20px 0;
+}
+
 .booking__text {
-  margin: 10px;
+  margin: 15px 5px;
+
+  & br {
+    display: none;
+  }
 }
 
 .booking__button {
+  margin-top: 20px;
   width: 100%;
 }
 
 
-@media (min-width: 768px) {
-  .booking {
-    min-height: 298px;
+@media (min-width: @tablet-width) {
+  .booking__title {
+    margin: 30px 0;
+  }
+
+  .booking__text {
+    & br {
+      display: inline;
+    }
+  }
+
+  .booking__button {
+    margin-top: 26px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: @desktop-width) {
   .booking {
-    min-height: 311px;
+    // min-height: 311px;
+  }
+
+  .booking__button {
+    margin-top: 31px;
   }
 }
