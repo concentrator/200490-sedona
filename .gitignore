@@ -3,10 +3,10 @@
 *.ai
 *.log
 *.pdf
-*.jpg
 *.psd
 *.sublime*
 css/*.css
 node_modules/
+preview/*.jpg
 npm-debug.*
 Thumbs.db
