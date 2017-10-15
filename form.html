@@ -12,7 +12,11 @@
       <header class="page-header">
         <nav class="main-nav">
           <a class="main-nav__logo site-logo" href="index.html">
-            <img class="site-logo__image" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип - Седона">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="site-logo__image" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип - Седона">
+            </picture>
           </a>
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list menu">
@@ -151,13 +155,13 @@
         <span class="page-footer__hashtag">#visitSEDONA</span>
         <ul class="page-footer__social social">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">Twitter</a>
+            <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Twitter</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Facebook</a>
+            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Facebook</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#">Youtube</a>
+            <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Youtube</span></a>
           </li>
         </ul>
         <div class="page-footer__copyright copyright">
@@ -170,6 +174,22 @@
         </div>
       </footer>
     </div>
+    <section class="modal modal--success">
+      <div class="modal__body">
+        <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+        <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
+      </div>
+      <div class="modal__footer">
+        <button class="modal__close button">Закрыть окно</button>
+      </div>
+    </section>
+    <section class="modal modal--failure">
+      <div class="modal__body">
+        <h2 class="modal__title">Что-то пошло не так!</h2>
+        <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="modal__close modal__close--ok button">Ок</button>
+      </div>
+    </section>
     <script src="js/script.js"></script>
   </body>
 </html>

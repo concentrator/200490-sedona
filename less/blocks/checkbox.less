@@ -5,6 +5,10 @@
   padding-left: 78px;
 }
 
+.checkbox__label {
+  cursor: pointer;
+}
+
 .checkbox__label::before {
   .pseudo();
   top: 0;
@@ -13,7 +17,6 @@
   height: 56px;
   border-radius: 4px;
   background-color: #f2f2f2;
-  cursor: pointer;
 }
 
 .checkbox__label::after {
@@ -51,10 +54,8 @@
   border-color: #a4a4a4;
 }
 
-
-@media (min-width: 1200px) {
+@media (min-width: @desktop-width) {
   .checkbox {
-
     padding-left: 81px;
   }
 }

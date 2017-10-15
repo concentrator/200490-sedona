@@ -1,14 +1,24 @@
 .advantages {
-  width: 100%;
+  max-width: 520px;
 }
 
 .advantages__list {
   .list-reset();
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
+  .advantages {
+    max-width: 768px;
+  }
+
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    max-width: 100%;
   }
 }

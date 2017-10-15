@@ -36,20 +36,21 @@
 @media (min-width: @tablet-width) {
   .feature {
     width: 33.3%;
-    height: 330px;
     padding: 45px;
     padding-top: 132px;
+    padding-bottom: 41px;
     flex-grow: 1;
     .center();
   }
 
   .feature__title {
     margin-top: 26px;
+    margin-bottom: 14px;
     font-size: 21px;
   }
 
   .feature__text {
-    margin: 20px 0;
+    margin: 21px 0;
 
     & br {
       display: inline;
@@ -69,5 +70,11 @@
   .feature--food {
     background-position: center 63px;
     background-size: 77px 68px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feature {
+    padding-bottom: 62px;
   }
 }
