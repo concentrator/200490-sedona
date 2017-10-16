@@ -3,10 +3,10 @@
   padding: 22px 20px 18px;
   border-top: 1px solid #e5e5e5;
   box-sizing: border-box;
-}
 
-.photo:last-child {
-  border-bottom: 1px solid #e5e5e5;
+  &:last-child {
+    border-bottom: 1px solid #e5e5e5;
+  }
 }
 
 .photo__full-link,
@@ -42,6 +42,8 @@
 
 @media (min-width: @tablet-width) {
   .photo {
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
     width: 50%;
     height: auto;
@@ -77,8 +79,8 @@
   }
 
   .photo__legend-wrapper {
+    min-height: 48px;
     margin-top: -3px;
-    margin-bottom: 0;
   }
 
   .photo__likes {
@@ -90,8 +92,7 @@
   }
 }
 
-
-@media (min-width: 1200px) {
+@media (min-width: @desktop-width) {
   .photo {
     flex-shrink: 0;
     height: 267px;

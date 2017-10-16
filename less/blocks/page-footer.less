@@ -3,7 +3,7 @@
   flex-direction: column;
   .center();
   padding: 20px;
-  min-height: 203px;
+  height: 203px;
   overflow: hidden;
 }
 
@@ -16,14 +16,14 @@
 }
 
 .page-footer__copyright {
-  margin-bottom: 0;
   margin-top: auto;
+  margin-bottom: 0;
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
     flex-direction: row;
-    min-height: 80px;
+    height: 80px;
     padding: 20px 0;
     align-items: center;
   }
@@ -32,6 +32,8 @@
   .page-footer__social {
     width: 33.3%;
     flex-grow: 0;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .page-footer__copyright {

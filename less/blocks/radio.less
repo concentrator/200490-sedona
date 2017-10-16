@@ -5,6 +5,11 @@
   padding-left: 78px;
 }
 
+
+.radio__label {
+  cursor: pointer;
+}
+
 .radio__label::before {
   content: "";
   position: absolute;
@@ -16,7 +21,6 @@
   border: 17px solid #f2f2f2;
   border-radius: 50%;
   background-color: #f2f2f2;
-  cursor: pointer;
 }
 
 .radio input:checked + .radio__label::before,
@@ -44,7 +48,7 @@
   background-color: #a4a4a4;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .radio {
     padding-left: 76px;
   }
