@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Седона - Форма отзыва</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
     <div class="container">
@@ -57,11 +57,11 @@
               <div class="fieldset__wrapper">
                 <p class="fieldset__row">
                   <label class="label" for="name-field">Имя*:</label>
-                  <input class="input" type="text" size="5" id="name-field" name="name" placeholder="Петр">
+                  <input class="input input--required" type="text" size="5" id="name-field" name="name" placeholder="Петр">
                 </p>
                 <p class="fieldset__row">
                   <label class="label" for="surname-field">Фамилия*:</label>
-                  <input class="input" type="text" size="5" id="surname-field" name="surname" placeholder="Иванов">
+                  <input class="input input--required" type="text" size="5" id="surname-field" name="surname" placeholder="Иванов">
                 </p>
                 <p class="fieldset__row">
                   <label class="label" for="midname-field">Отчество:</label>
@@ -74,11 +74,11 @@
               <div class="fieldset__wrapper fieldset__wrapper--contact">
                 <p class="fieldset__block">
                   <label class="label label--icon label--tel" for="tel-field"><span>Контактный</span> телефон*:</label>
-                  <input class="input input--icon" type="tel" id="tel-field" name="tel" placeholder="Введите телефон">
+                  <input class="input input--required input--icon" type="tel" id="tel-field" name="tel" placeholder="Введите телефон">
                 </p>
                 <p class="fieldset__block">
                   <label class="label label--icon label--email" for="email-field">Электронная почта*:</label>
-                  <input class="input input--icon" type="email" id="email-field" name="email" placeholder="Введите e-mail">
+                  <input class="input input--required input--icon" type="email" id="email-field" name="email" placeholder="Введите e-mail">
                 </p>
               </div>
             </fieldset>
@@ -191,8 +191,9 @@
         <button class="modal__close modal__close--ok button">Ок</button>
       </div>
     </section>
-    <script src="js/script.js"></script>
-    <script src="js/svg4everybody.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/modal.min.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
   </body>
 </html>
