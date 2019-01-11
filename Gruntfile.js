@@ -64,16 +64,6 @@ module.exports = function(grunt) {
         src: ['*.css', '!*.min.css'],
         dest: 'build/css/',
         ext: '.min.css'
-      },
-      docs: {
-        options: {
-          report: "gzip"
-        },
-        expand: true,
-        cwd: 'css/',
-        src: ['*.css', '!*.min.css'],
-        dest: 'docs/css/',
-        ext: '.min.css'
       }
     },
 
@@ -138,11 +128,30 @@ module.exports = function(grunt) {
           dest: "build"
         }]
       },
+      css: {
+        files: [{
+          expand: true,
+          cwd: 'build',
+          src: [
+            'css/*.css'
+          ],
+          dest: "docs"
+        }]
+      },
+      js: {
+        files: [{
+          expand: true,
+          cwd: 'build',
+          src: [
+            'js/*.js'
+          ],
+          dest: "docs"
+        }]
+      },
       docs: {
         files: [{
           expand: true,
           src: [
-            "js/*.js",
             "fonts/**/*.{woff,woff2}",
             "img/*.{jpg,png,svg,webp}",
             "*.html"
@@ -168,6 +177,8 @@ module.exports = function(grunt) {
     "postcss",
     "csso",
     "uglify",
-    "copy:docs"
+    "copy:docs",
+    "copy:css",
+    "copy:js"
   ]);
 };

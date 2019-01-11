@@ -4,27 +4,25 @@
   "private": true,
   "description": "Личный проект «Седона» от HTML Academy",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "7.1.x",
+    "autoprefixer": "^9.4.4",
     "grunt": "^1.0.3",
     "grunt-browser-sync": "2.2.x",
-    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^3.1.0",
     "grunt-contrib-less": "^2.0.0",
-    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-contrib-uglify": "^4.0.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-csso": "^2.2.0",
+    "grunt-csso": "^2.2.4",
     "grunt-cwebp": "^2.1.1",
     "grunt-postcss": "0.9.x",
-    "load-grunt-tasks": "^3.5.2",
+    "load-grunt-tasks": "^4.0.0",
     "stylelint": "^9.9.0",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "^0.1.1"
   },
   "scripts": {
-    "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint 'less/**/*.less' --syntax less",
-    "test": "npm run editorconfig && npm run stylelint",
+    "test": "npm run stylelint",
     "build": "grunt build",
     "start": "npm run build && grunt serve"
   },
@@ -32,14 +30,6 @@
     "last 2 versions",
     "IE 11",
     "Firefox ESR"
-  ],
-  "editorconfig-cli": [
-    "*.html",
-    "*.json",
-    "*.js",
-    "js/**/*.js",
-    "img/**/*.svg",
-    "less/**/*.less"
   ],
   "engines": {
     "node": "8.2"
