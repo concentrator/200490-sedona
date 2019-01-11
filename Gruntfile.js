@@ -55,7 +55,7 @@ module.exports = function(grunt) {
     },
 
     csso: {
-      style: {
+      build: {
         options: {
           report: "gzip"
         },
@@ -63,6 +63,16 @@ module.exports = function(grunt) {
         cwd: 'css/',
         src: ['*.css', '!*.min.css'],
         dest: 'build/css/',
+        ext: '.min.css'
+      },
+      docs: {
+        options: {
+          report: "gzip"
+        },
+        expand: true,
+        cwd: 'css/',
+        src: ['*.css', '!*.min.css'],
+        dest: 'docs/css/',
         ext: '.min.css'
       }
     },
@@ -127,11 +137,24 @@ module.exports = function(grunt) {
           ],
           dest: "build"
         }]
+      },
+      docs: {
+        files: [{
+          expand: true,
+          src: [
+            "js/*.js",
+            "fonts/**/*.{woff,woff2}",
+            "img/*.{jpg,png,svg,webp}",
+            "*.html"
+          ],
+          dest: "docs"
+        }]
       }
     },
 
     clean: {
-      build: ["build"]
+      build: ["build"],
+      docs: ["docs"]
     }
 
   });
@@ -144,6 +167,7 @@ module.exports = function(grunt) {
     "less",
     "postcss",
     "csso",
-    "uglify"
+    "uglify",
+    "copy:docs"
   ]);
 };
